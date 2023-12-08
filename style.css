@@ -241,20 +241,22 @@ body {
 
 .menu .row .menu-card {
   text-align: center;
-  margin: 1.5rem 1rem;
+  margin: 1rem 1rem;
   background-color: #525252;
   border-radius: 5%;
-  padding: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .menu .row .menu-card img {
-  border-radius: 5%;
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
   width: 250px;
 }
 
 .menu .row .menu-card .menu-card-tittle {
   margin: 1rem auto 0.5rem;
   color: var(--fontcolor);
+  font-size: 1rem;
 }
 
 .menu .row .menu-card .cta-card {
