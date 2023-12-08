@@ -1,0 +1,355 @@
+:root {
+  /* variable */
+  --primary: #009dc4;
+  --bg: #404040;
+  --fontcolor: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+html {
+  /* tujuannya untuk agar navigasi dan scroll menjadi smooth */
+  scroll-behavior: smooth;
+}
+
+/* body */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  /* janagn lupa ini di hapus, untuk SIMULASI SAJA */
+  /* min-height: 5000px; */
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 5%;
+  background-color: #0000009d;
+  /* border-bottom: 1px solid var(--primary); */
+  /* posisi Y navigation */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* agar posisi navbar selalu ada pada layer paling atas */
+  z-index: 10;
+}
+
+/* element navbar */
+.navbar .navbar-logo {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--fontcolor);
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+  font-weight: 800;
+  /* font-style: italic; */
+}
+
+.navbar .navbar-nav a {
+  /* background-color: aqua; */
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 0 0.6rem;
+  color: var(--fontcolor);
+}
+
+/* .navbar .navbar-nav{
+    display: flex;
+    font-size: 14px;
+    width: 40%;
+    justify-content: space-between;
+} */
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--primary);
+  transform: scaleX(0);
+}
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.6);
+  transition: all 0.8s;
+}
+
+.navbar .navbar-extra a {
+  margin: 0 0.5rem;
+  color: var(--fontcolor);
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* home section */
+.hero {
+  /* tingginya biar penuh 1 layar pakek satuan vh */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url(img/wedding_home.jpg);
+  background-repeat: no-repeat;
+  /* ambar ditampilkan secara penuh di layar/ tidak dlm keadaan zoom */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 25%;
+  bottom: 0;
+  /* untuk membuat gradasi warna agar ngeblend */
+  background: linear-gradient(0deg, rgba(64, 64, 64) 3%, rgba(255, 255, 255, 0) 40%);
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 4em;
+  color: var(--fontcolor);
+  text-shadow: 1px, 1px, 3px rgba(1, 1, 3, 0.5rem);
+  line-height: 1.3;
+  /* mix-blend-mode: difference; */
+}
+
+.hero .content h1 span {
+  color: var(--primary);
+}
+.hero .content p {
+  margin-top: 1rem;
+  font-size: 1.5em;
+  font-weight: 300;
+  color: var(--fontcolor);
+  line-height: 1.2;
+  text-shadow: 1px, 1px, 3px rgba(1, 1, 3, 0.5rem);
+}
+
+.hero .content .cta {
+  margin-top: 1.5rem;
+  display: inline-block;
+  background-color: var(--primary);
+  padding: 1rem 2.5rem;
+  font-size: 1.4rem;
+  color: var(--fontcolor);
+  border-radius: 0.5rem;
+  box-shadow: 1px, 1px, 3px rgba(1, 1, 3, 0.5rem);
+  transition: 1s;
+}
+.hero .content .cta:hover {
+  background-color: #004455;
+}
+
+/* ABOUT SECTION */
+.about,
+.menu,
+.kontak {
+  padding: 7rem 7% 1.4rem;
+}
+
+.about h2,
+.menu h2,
+.kontak h2 {
+  text-align: center;
+  color: var(--fontcolor);
+  font-size: 2.5em;
+  margin-bottom: 3rem;
+}
+.about h2 span,
+.menu h2 span,
+.kontak h2 span {
+  color: var(--primary);
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+}
+
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 0 2rem;
+  color: var(--fontcolor);
+}
+
+.about .row .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about .row .content p {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+/* KATALOG SECTION */
+.menu h2,
+.kontak h2 {
+  margin-bottom: 1.5rem;
+}
+.menu p,
+.kontak p {
+  color: var(--fontcolor);
+  text-align: center;
+  font-size: 1.2rem;
+  max-width: 40rem;
+  /* supaya posisinya ditengah */
+  margin: auto;
+  font-weight: 100;
+  line-height: 1.6;
+}
+.menu .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  justify-content: center;
+}
+
+.menu .row .menu-card {
+  text-align: center;
+  margin: 1.5rem 1rem;
+  background-color: #525252;
+  border-radius: 5%;
+  padding: 1.5rem;
+}
+
+.menu .row .menu-card img {
+  border-radius: 5%;
+  width: 250px;
+}
+
+.menu .row .menu-card .menu-card-tittle {
+  margin: 1rem auto 0.5rem;
+  color: var(--fontcolor);
+}
+
+.menu .row .menu-card .cta-card {
+  margin-top: 1.2rem;
+  display: inline-block;
+  background-color: var(--primary);
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  color: var(--fontcolor);
+  border-radius: 0.5rem;
+  box-shadow: 1px, 1px, 3px rgba(1, 1, 3, 0.5rem);
+  transition: 1s;
+}
+.menu .row .menu-card .cta-card:hover {
+  background-color: #004455;
+}
+
+/* KONTAK SECTION */
+.kontak .row {
+  display: flex;
+  margin-top: 2rem;
+  background-color: #525252;
+}
+
+.kontak .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.kontak .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.kontak .row form .input-group {
+  display: flex;
+  color: var(--fontcolor);
+  padding: 0 1rem;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: var(--bg);
+  border: 1.5px solid var(--primary);
+}
+
+.kontak .row form .input-group input {
+  width: 100%;
+  color: var(--fontcolor);
+  padding: 1rem;
+  font-size: 1.3em;
+  background: none;
+}
+
+.kontak .row form .btn-kirim {
+  display: inline-block;
+  margin-top: 4rem;
+  padding: 0.8rem 2rem;
+  border-radius: 0.5rem;
+  background-color: var(--primary);
+  color: var(--fontcolor);
+  cursor: pointer;
+}
+
+/* footer */
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
+  color: var(--fontcolor);
+}
+
+footer .social-media {
+  padding: 1rem 0;
+}
+footer .social-media a {
+  color: var(--fontcolor);
+  margin: 0 0.5rem;
+}
+
+footer .social-media a:hover {
+  color: var(--bg);
+  transition: all 1s;
+}
+
+footer .credit {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+footer .credit p a {
+  color: var(--fontcolor);
+  font-weight: 600;
+}
+footer .credit p a:hover {
+  color: var(--bg);
+  transition: all 1s;
+}
