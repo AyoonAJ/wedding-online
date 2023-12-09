@@ -80,6 +80,12 @@
   .kontak .row form {
     padding: 3rem 2rem;
   }
+
+  /* navbar search form */
+  .navbar .search-form {
+    width: 80%;
+    right: 5rem;
+  }
 }
 
 /* Smartphone */
