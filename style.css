@@ -321,6 +321,74 @@ body {
 }
 
 /* PRODUCT SECTION */
+.products .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+.products .product-card {
+  text-align: center;
+  border: 1px solid var(--primary);
+  padding: 2rem;
+}
+
+.products .product-icon {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.products .product-icon a {
+  width: 3.5rem;
+  height: 3.5rem;
+  color: var(--fontcolor);
+  margin: 1.5rem 1rem;
+  border: 1px solid var(--fontcolor);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+}
+
+.products .product-icon a:hover {
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.products .product-img {
+  padding: 1rem 0;
+}
+
+.products .product-img img {
+  /* height: 25rem; */
+  width: 100%;
+}
+
+.products .product-info {
+  font-size: 1.5rem;
+  color: var(--fontcolor);
+}
+
+.products .product-rate {
+  font-size: 1.7rem;
+  padding: 0.8rem;
+  color: #f0a400;
+}
+
+.products .product-rate .star {
+  fill: #f0a400;
+}
+
+.products .product-price {
+  font-size: 1.2rem;
+}
+.products .product-price span {
+  text-decoration: line-through;
+  color: var(--primary);
+  font-size: 1rem;
+}
 
 /* KONTAK SECTION */
 .kontak .row {
